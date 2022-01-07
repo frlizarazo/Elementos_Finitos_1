@@ -24,6 +24,8 @@ syms x1 xi L E A b
 N1=poly2sym(round(polyfit([-1 0 1],[1 0 0],2),10),xi);
 N2=poly2sym(round(polyfit([-1 0 1],[0 1 0],2),10),xi);
 N3=poly2sym(round(polyfit([-1 0 1],[0 0 1],2),10),xi);
+% Aqui la función round ayuda a eliminar errores de aproximacion
+% es decir, elimina lo que es practicamente 0
 
 % Se define la posicion de los nodos en funcion del primero
 x2=x1+L/2;
